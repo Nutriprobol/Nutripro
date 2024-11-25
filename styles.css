@@ -1,10 +1,12 @@
-/* Fondo degradado dinámico */
 body {
     background: linear-gradient(45deg, #1a73e8, #6a11cb, #2575fc, #ff516e);
     background-size: 400% 400%;
     animation: GradientBackground 15s ease infinite;
-    color: white;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes GradientBackground {
@@ -13,66 +15,99 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Contenedores con efecto de cristal */
 .container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Categorías con efectos modernos */
+/* Estilos para el logo y título principal */
+.logo h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 
+        3px 3px 6px rgba(0,0,0,0.3),
+        0 0 20px rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Categorías con alta visibilidad */
+.category-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .category-item {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        inset 0 0 15px rgba(0,0,0,0.05);
+    text-decoration: none;
 }
 
 .category-item:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    box-shadow: 
+        0 15px 25px rgba(0,0,0,0.2),
+        inset 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Títulos y textos con sombras */
-h1, h2 {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Botones con efectos */
-.btn {
-    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    transform: scale(1.1) rotate(2deg);
-}
-
-/* Media Queries para Responsividad */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    body {
-        background-size: 600% 600%;
+    .category-menu {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .category-item {
-        padding: 15px;
-        margin: 10px 0;
+    .logo h1 {
+        font-size: 2.5rem;
     }
 }
 
-/* Efecto neón para elementos interactivos */
-.neon-effect {
-    transition: all 0.3s ease;
+@media (max-width: 480px) {
+    .category-menu {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
 }
 
-.neon-effect:hover {
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 15px #0073e6,
-        0 0 20px #0073e6;
+/* Efecto de brillo en categorías */
+.category-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.category-item div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, 
+        rgba(255,255,255,0.3) 0%, 
+        transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover div::after {
+    opacity: 1;
 }
