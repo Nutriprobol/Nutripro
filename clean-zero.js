@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const productImg = document.getElementById('product-img');
 
     const productImages = {
-        'vainilla': 'imgproteina/cleanzero-vainilla.png',
-        'chocolate': 'imgproteina/cleanzero-chocolate.png',
-        'capuccino': 'imgproteina/cleanzero-capuccino.png'
+        'vainilla': 'imgproteina/cleanzero.PNG',
+        'chocolate': 'imgproteina/cleanzero.PNG',
+        'capuccino': 'imgproteina/cleanzero.PNG'
     };
 
     flavorButtons.forEach(button => {
