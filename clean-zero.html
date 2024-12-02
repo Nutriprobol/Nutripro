@@ -7,68 +7,70 @@
     <link rel="stylesheet" href="clean-zero.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <div class="product-container">
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto px-4 py-8">
+
         <!-- Encabezado -->
-        <header class="header text-center py-4">
-            <h1 class="product-title text-3xl font-bold text-blue-600">Clean Zero 900gr</h1>
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold tracking-wide">Clean Zero 900gr</h1>
+            <p class="mt-2 text-lg text-gray-300">El suplemento perfecto para tu cuerpo sin grasas, azúcares ni carbohidratos.</p>
         </header>
 
-        <!-- Botones de navegación -->
-        <div class="button-group flex justify-between px-4 py-2">
-            <button onclick="history.back()" class="btn btn-secondary">Atrás</button>
-            <a href="https://nutriprobol.github.io/Nutripro/" class="btn btn-primary">Principal</a>
-            <button id="menuToggle" class="btn btn-dashboard">Categorias</button>
+        <!-- Botones de navegación (Atrás y Principal) -->
+        <div class="flex justify-between items-center mb-6">
+            <button onclick="history.back()" class="btn-back text-2xl py-2 px-4 rounded-md bg-gray-800 hover:bg-gray-700 transition-all">
+                ← Atrás
+            </button>
+            <a href="https://nutriprobol.github.io/Nutripro/" class="btn-primary py-2 px-6 rounded-md bg-blue-500 hover:bg-blue-400 transition-all">
+                Principal
+            </a>
         </div>
 
         <!-- Imagen del Producto -->
-        <div class="product-image text-center my-6">
-            <img src="imgproteina/cleanzero.PNG" alt="Clean Zero 900gr" class="w-64 mx-auto">
+        <div class="text-center mb-6">
+            <img src="img/clean-zero.jpg" alt="Clean Zero 900gr" class="rounded-lg shadow-lg w-full max-w-xs mx-auto transition-all hover:scale-105">
         </div>
-        
+
         <!-- Precio -->
-        <div class="product-price text-center my-4">
-            <p class="price text-2xl font-semibold">390 BS</p>
+        <div class="text-center mb-6">
+            <p class="text-3xl font-semibold">390 BS</p>
         </div>
-        
+
         <!-- Información del Producto -->
-        <section class="product-info px-4">
-            <h2 class="text-xl font-bold mb-2">Información del Producto</h2>
-            <ul class="list-disc pl-6 text-gray-700">
+        <section class="product-info mb-6">
+            <h2 class="text-xl font-semibold mb-3">Información del Producto</h2>
+            <ul class="list-none space-y-3">
                 <li><strong>Sabores:</strong> Vainilla, Chocolate, Capuccino</li>
-                <li><strong>Cero grasas, Cero azúcar, Cero carbohidratos</li>
+                <li><strong>Características:</strong> Cero grasas, Cero Azúcar, Cero carbohidratos</li>
             </ul>
         </section>
 
         <!-- Recomendación de Consumo -->
-        <section class="product-recommendation px-4 mt-4">
-            <h2 class="text-xl font-bold mb-2">Recomendación de Consumo</h2>
-            <p><strong>Preparación:</strong> Disolver una porción de 30gr. (2 scoop) en 300 ml de agua.</p>
+        <section class="recommendation bg-gray-800 rounded-lg p-6 mb-8 shadow-xl">
+            <h2 class="text-xl font-semibold mb-3">Recomendación de Consumo</h2>
+            <p><strong>Preparación:</strong> Disolver una porción de 30gr (2 scoops) en 300 ml de agua.</p>
             <p><strong>¿Cuánto tomar?</strong> Consumir después de la actividad física o usar con bebidas vegetales o recetas.</p>
         </section>
 
-        <!-- Menú de Categorías (Dashboard) -->
-        <div id="mobileMenu" class="mobile-menu hidden bg-white p-4 rounded-md shadow-lg">
-            <ul>
-                <li><a href="proteinas.html" class="block py-2">🏋️ Proteínas</a></li>
-                <li><a href="termogenicos.html" class="block py-2">🔥 Termogénicos</a></li>
-                <li><a href="creatinas.html" class="block py-2">💪 Creatinas</a></li>
-                <li><a href="ganadores-peso.html" class="block py-2">📈 Ganadores de Peso</a></li>
-                <li><a href="esenciales.html" class="block py-2">🌟 Esenciales</a></li>
-                <li><a href="pre-entreno.html" class="block py-2">⚡ Pre-Entreno</a></li>
-                <li><a href="veganos.html" class="block py-2">🌱 Veganos</a></li>
-                <li><a href="snacks.html" class="block py-2">🍎 Snacks Saludables</a></li>
-                <li><a href="energeticos.html" class="block py-2">💥 Energéticos</a></li>
-                <li><a href="accesorios-ropa.html" class="block py-2">👕 Accesorios y Ropa</a></li>
-            </ul>
+        <!-- Animación de call-to-action -->
+        <div class="text-center">
+            <a href="https://nutriprobol.github.io/Nutripro/" class="btn-purchase py-3 px-8 bg-green-500 text-xl font-semibold text-white rounded-lg hover:bg-green-400 transition-all transform hover:scale-105">
+                ¡Compra Ahora!
+            </a>
         </div>
     </div>
 
     <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
+        // Asegura que el menú de navegación móvil esté oculto
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.id = 'mobileMenu';
+            mobileMenu.classList.add('mobile-menu');
         });
     </script>
+
 </body>
 </html>
