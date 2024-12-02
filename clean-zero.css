@@ -1,56 +1,87 @@
-/* Reset de Estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
     padding: 20px;
 }
 
-/* Estilos de los botones */
-.btn-back, .btn-primary {
-    font-size: 1.2rem;
-    padding: 12px 25px;
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.btn-back, .btn-principal {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover, .btn-principal:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.flavor-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.flavor-btn {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.flavor-btn:hover, .flavor-btn.active {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.flavor-selector-text {
     text-align: center;
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
 }
 
-.btn-back {
-    background-color: #333;
-    color: white;
-}
-
-.btn-back:hover {
-    background-color: #444;
-}
-
-.btn-primary {
-    background-color: #1a73e8;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #135eab;
-}
-
-/* Imagen del Producto */
 .product-image img {
-    width: 80%;
-    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -58,46 +89,28 @@ body {
     transform: scale(1.05);
 }
 
-/* Información del Producto */
-.product-details {
-    background-color: #333;
-    padding: 20px;
+.product-info {
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.product-details h2 {
+.price {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    color: #ffd700;
+    margin: 10px 0;
 }
 
-.product-details p {
-    font-size: 1.1rem;
-}
-
-/* Mensaje de Compra */
-.info-additional {
-    background-color: #444;
-    padding: 25px;
-    margin-top: 30px;
+.recommendation, .purchase-alert {
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px;
+    margin: 15px 0;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-.info-additional h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.info-additional p {
-    font-size: 1.2rem;
-}
-
-/* Estilos de los botones de navegación */
-.btn-back, .btn-primary {
-    transition: all 0.3s ease;
-}
-
-.btn-back:hover, .btn-primary:hover {
-    transform: scale(1.05);
+.hidden {
+    display: none;
 }
