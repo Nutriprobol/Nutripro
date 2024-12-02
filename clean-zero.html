@@ -23,54 +23,41 @@
             <button onclick="history.back()" class="btn-back text-2xl py-2 px-4 rounded-md bg-gray-800 hover:bg-gray-700 transition-all">
                 ← Atrás
             </button>
-            <a href="https://nutriprobol.github.io/Nutripro/" class="btn-primary py-2 px-6 rounded-md bg-blue-500 hover:bg-blue-400 transition-all">
+            <a href="https://nutriprobol.github.io/Nutripro/" class="btn-primary py-2 px-6 rounded-md bg-blue-600 hover:bg-blue-500 transition-all">
                 Principal
             </a>
         </div>
 
         <!-- Imagen del Producto -->
-        <div class="text-center mb-6">
-            <img src="imgproteina/cleanzero.PNG" alt="Clean Zero 900gr" class="rounded-lg shadow-lg w-full max-w-xs mx-auto transition-all hover:scale-105">
-        </div>
-
-        <!-- Precio -->
-        <div class="text-center mb-6">
-            <p class="text-3xl font-semibold">390 BS</p>
+        <div class="product-image text-center my-6">
+            <img src="imgproteina/cleanzero.PNG" alt="Clean Zero 900gr" class="w-64 mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
         </div>
 
         <!-- Información del Producto -->
-        <section class="product-info mb-6">
-            <h2 class="text-xl font-semibold mb-3">Información del Producto</h2>
-            <ul class="list-none space-y-3">
-                <li><strong>Sabores:</strong> Vainilla, Chocolate, Capuccino</li>
-                <li><strong>Características:</strong> Cero grasas, Cero Azúcar, Cero carbohidratos</li>
-            </ul>
-        </section>
-
-        <!-- Recomendación de Consumo -->
-        <section class="recommendation bg-gray-800 rounded-lg p-6 mb-8 shadow-xl">
-            <h2 class="text-xl font-semibold mb-3">Recomendación de Consumo</h2>
-            <p><strong>Preparación:</strong> Disolver una porción de 30gr (2 scoops) en 300 ml de agua.</p>
-            <p><strong>¿Cuánto tomar?</strong> Consumir después de la actividad física o usar con bebidas vegetales o recetas.</p>
-        </section>
-
-        <!-- Animación de call-to-action -->
-        <div class="text-center">
-            <a href="https://nutriprobol.github.io/Nutripro/" class="btn-purchase py-3 px-8 bg-green-500 text-xl font-semibold text-white rounded-lg hover:bg-green-400 transition-all transform hover:scale-105">
-                ¡Compra Ahora!
-            </a>
+        <div class="product-details text-center mb-8 p-6 bg-gray-800 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Detalles del Producto</h2>
+            <p><strong>Sabores:</strong> Vainilla, Chocolate y Capuccino</p>
+            <p><strong>Beneficios:</strong> Cero grasas, Cero azúcar, Cero carbohidratos</p>
         </div>
+
+        <!-- Mensaje de Compra -->
+        <div class="text-center bg-gradient-to-r from-green-500 to-blue-600 text-white py-4 mb-6 rounded-xl shadow-lg">
+            <p class="text-xl font-bold">¡Compra ahora y eleva tu rendimiento!</p>
+            <p class="text-lg">Obtén el mejor suplemento para tu entrenamiento. ¡Sin grasas, sin azúcares y sin carbohidratos!</p>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="info-additional bg-gray-800 text-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Recomendación de Consumo</h2>
+            <p><strong>Preparación:</strong> Disolver una porción de 30gr (2 scoops) en 300 ml de agua</p>
+            <p><strong>¿Cuánto tomar?</strong> Consumir después de la actividad física o usar con bebidas vegetales o en recetas.</p>
+        </div>
+        
     </div>
 
+    <!-- Scripts (Opcional) -->
     <script>
-        // Asegura que el menú de navegación móvil esté oculto
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.createElement('div');
-            mobileMenu.id = 'mobileMenu';
-            mobileMenu.classList.add('mobile-menu');
-        });
+        // Aquí podrías agregar interactividad adicional si lo deseas
     </script>
-
 </body>
 </html>
