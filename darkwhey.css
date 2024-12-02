@@ -11,6 +11,29 @@ body {
     line-height: 1.6;
 }
 
+/* Add these styles to the existing CSS */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #16213e;
+}
+
+.btn-back, .btn-principal {
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover, .btn-principal:hover {
+    background-color: #6a7394;
+}
+
 .container {
     max-width: 100%;
     padding: 20px;
