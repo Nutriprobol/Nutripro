@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.product-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.product-title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.product-info, .product-recommendation {
+    margin-top: 20px;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #22c55e;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: #f43f5e;
+    color: white;
+}
+
+.btn-dashboard {
+    background-color: #6366f1;
+    color: white;
+}
+
+/* Imagen del producto */
+.product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Precio */
+.product-price .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menú desplegable de categorías */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
