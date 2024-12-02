@@ -10,6 +10,13 @@ body {
     color: #ffffff;
     line-height: 1.6;
 }
+/* Add these styles to the existing CSS */
+.size-selector-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #6a7394;
+    font-style: italic;
+}
 
 /* Add these styles to the existing CSS */
 .navigation-buttons {
