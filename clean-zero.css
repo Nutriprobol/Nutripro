@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #fff;
+    background-color: #1a1a2e;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -20,11 +20,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: #16213e;
 }
 
 .btn-back, .btn-principal {
-    background-color: rgba(255,255,255,0.2);
+    background-color: #4a4e69;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -35,7 +35,7 @@ body {
 }
 
 .btn-back:hover, .btn-principal:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: #6a7394;
 }
 
 header {
@@ -44,36 +44,9 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    color: #4a4e69;
+    font-size: 2rem;
     margin-bottom: 10px;
-}
-
-.flavor-selector {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.flavor-btn {
-    background-color: rgba(255,255,255,0.2);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.flavor-btn:hover, .flavor-btn.active {
-    background-color: rgba(255,255,255,0.4);
-}
-
-.flavor-selector-text {
-    text-align: center;
-    margin-bottom: 15px;
-    color: rgba(255,255,255,0.7);
-    font-style: italic;
 }
 
 .product-image img {
@@ -82,19 +55,11 @@ header h1 {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.product-image img:hover {
-    transform: scale(1.05);
 }
 
 .product-info {
     text-align: center;
     margin-top: 20px;
-    background-color: rgba(255,255,255,0.1);
-    padding: 15px;
-    border-radius: 10px;
 }
 
 .price {
@@ -103,14 +68,32 @@ header h1 {
     margin: 10px 0;
 }
 
-.recommendation, .purchase-alert {
-    background-color: rgba(255,255,255,0.1);
+.flavor-selector {
+    margin: 15px 0;
+}
+
+.flavor-selector h3 {
+    color: #4a4e69;
+    margin-bottom: 10px;
+}
+
+.product-description, .consumption-guide, .purchase-alert {
+    background-color: #16213e;
     padding: 15px;
     margin: 15px 0;
     border-radius: 10px;
-    text-align: center;
 }
 
-.hidden {
-    display: none;
+.product-description ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.product-description li::before {
+    content: "✓ ";
+    color: #4a4e69;
+}
+
+.purchase-alert {
+    text-align: center;
 }
